@@ -13,12 +13,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(
-  cors({
-    origin: "http://localhost:3000", // Allow frontend to connect
-    credentials: true,
-  })
-);
+app.use(cors({ origin: "https://round-robin-frontend-one.vercel.app", credentials: true }));
 
 
 app.use(express.json());
